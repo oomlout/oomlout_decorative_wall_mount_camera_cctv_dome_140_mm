@@ -264,7 +264,7 @@ def get_spacer_star(thing, **kwargs):
     #p3["m"] = "#"
     pos1 = copy.deepcopy(pos)             
     p3["pos"] = pos1
-    rot = [0,0,45]
+    rot = [0,0,0]
     p3["rot"] = rot    
     oobb_base.append_full(thing,**p3)
     

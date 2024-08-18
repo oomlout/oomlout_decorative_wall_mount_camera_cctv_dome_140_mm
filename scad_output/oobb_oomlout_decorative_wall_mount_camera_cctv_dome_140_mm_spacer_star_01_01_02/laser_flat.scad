@@ -10,20 +10,18 @@ union() {
 				}
 				difference() {
 					union() {
-						rotate(a = [0, 0, 45]) {
-							hull() {
-								translate(v = [-32.0000000000, 32.0000000000, 0]) {
-									cylinder(h = 2, r = 5);
-								}
-								translate(v = [32.0000000000, 32.0000000000, 0]) {
-									cylinder(h = 2, r = 5);
-								}
-								translate(v = [-32.0000000000, -32.0000000000, 0]) {
-									cylinder(h = 2, r = 5);
-								}
-								translate(v = [32.0000000000, -32.0000000000, 0]) {
-									cylinder(h = 2, r = 5);
-								}
+						hull() {
+							translate(v = [-32.0000000000, 32.0000000000, 0]) {
+								cylinder(h = 2, r = 5);
+							}
+							translate(v = [32.0000000000, 32.0000000000, 0]) {
+								cylinder(h = 2, r = 5);
+							}
+							translate(v = [-32.0000000000, -32.0000000000, 0]) {
+								cylinder(h = 2, r = 5);
+							}
+							translate(v = [32.0000000000, -32.0000000000, 0]) {
+								cylinder(h = 2, r = 5);
 							}
 						}
 						hull() {
