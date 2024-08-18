@@ -26,9 +26,9 @@ def make_scad(**kwargs):
     # default variables
     if True:
         kwargs["size"] = "oobb"
-        kwargs["width"] = 12
-        kwargs["height"] = 12
-        kwargs["thickness"] = 6
+        kwargs["width"] = 1
+        kwargs["height"] = 1
+        kwargs["thickness"] = 9
 
     # project_variables
     if True:
@@ -38,7 +38,7 @@ def make_scad(**kwargs):
     if True:
 
         part_default = {} 
-        part_default["project_name"] = "test" ####### neeeds setting
+        part_default["project_name"] = "oomlout_decorative_wall_mount_camera_cctv_dome_140_mm" ####### neeeds setting
         part_default["full_shift"] = [0, 0, 0]
         part_default["full_rotations"] = [0, 0, 0]
         
@@ -70,26 +70,56 @@ def get_base(thing, **kwargs):
     #pos = copy.deepcopy(pos)
     #pos[2] += -20
 
-    #add plate
+    #add 5 mm cylinder
     p3 = copy.deepcopy(kwargs)
     p3["type"] = "p"
-    p3["shape"] = f"oobb_plate"    
+    p3["shape"] = f"oobb_cylinder"    
     p3["depth"] = depth
+    p3["radius"] = 4.75/2
+    #p3["m"] = "#"
+    pos1 = copy.deepcopy(pos)         
+    p3["zz"] = "bottom"
+    p3["pos"] = pos1
+    oobb_base.append_full(thing,**p3)
+    
+    #add 8mm cylinder top
+    p3 = copy.deepcopy(kwargs)
+    p3["type"] = "p"
+    p3["shape"] = f"oobb_cylinder"
+    p3["depth"] = 3
+    p3["radius"] = 8/2
+    #p3["m"] = "#"
+    pos1 = copy.deepcopy(pos)
+    pos1[2] += depth
+    p3["pos"] = pos1
+    p3["zz"] = "top"
+    oobb_base.append_full(thing,**p3)
+    
+    #add hole
+    p3 = copy.deepcopy(kwargs)
+    p3["type"] = "n"
+    p3["shape"] = f"oobb_hole"
+    p3["radius_name"] = "m3"
     #p3["m"] = "#"
     pos1 = copy.deepcopy(pos)         
     p3["pos"] = pos1
     oobb_base.append_full(thing,**p3)
-    #add holes
+
+    #add countersunk screw
     p3 = copy.deepcopy(kwargs)
-    p3["type"] = "p"
-    p3["shape"] = f"oobb_holes"
-    p3["both_holes"] = True  
-    p3["depth"] = depth
-    p3["holes"] = "perimeter"
+    p3["type"] = "n"
+    p3["shape"] = f"oobb_screw_countersunk"
+    p3["radius_name"] = "m3"
+    p3["depth"] = depth + 3
+    p3["nut"] = True
     #p3["m"] = "#"
-    pos1 = copy.deepcopy(pos)         
+    pos1 = copy.deepcopy(pos)
+    pos1[2] += -3
     p3["pos"] = pos1
+    rot1 = [0,180,0]
+    p3["rot"] = rot1
     oobb_base.append_full(thing,**p3)
+
 
     if prepare_print:
         #put into a rotation object
