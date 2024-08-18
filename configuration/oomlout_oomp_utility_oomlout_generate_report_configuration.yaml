@@ -1,0 +1,32 @@
+outputs:
+  - name: "parts_all"        
+  - name: "parts_basic"
+    keys: 
+      - "short_code"
+      - "name"
+      - "classification"
+      - "type"
+      - "size"
+      - "color"
+      - "description_main"
+      - "description_extra"
+      - "manufacturer"
+      - "part_number"
+  - name: "bolt_helper"
+    keys:
+      - short_code
+      - name
+      - type
+      - description_main
+      - description_only_numbers1151M390060
+      
+      - part_number_distributor_orbital_fasteners
+      - webpage_distributor_orbital_fasteners
+      - part_number_manufacturer_metalmate
+      - webpage_manufacturer_metalmate 
+      - price_current
+      - name_manufacturer_metalmate
+
+
+
+    

@@ -1,0 +1,6 @@
+project_id: oomlout_decorative_wall_mount_camera_cctv_dome_140_mm
+project_name: Oomlout Decorative Wall Mount Camera Cctv Dome 140 Mm
+project_repo: https://github.com/oomlout/oomlout_decorative_wall_mount_camera_cctv_dome_140_mm
+production_format:
+  oolc_1:
+    file_location: source_files/oolc_1.cdr
