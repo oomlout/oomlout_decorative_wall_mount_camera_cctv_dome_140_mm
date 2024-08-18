@@ -17,18 +17,20 @@ difference() {
 				cylinder(h = 2, r = 5);
 			}
 		}
-		hull() {
-			translate(v = [-9.5000000000, 9.5000000000, 0]) {
-				cylinder(h = 5, r = 5);
-			}
-			translate(v = [9.5000000000, 9.5000000000, 0]) {
-				cylinder(h = 5, r = 5);
-			}
-			translate(v = [-9.5000000000, -9.5000000000, 0]) {
-				cylinder(h = 5, r = 5);
-			}
-			translate(v = [9.5000000000, -9.5000000000, 0]) {
-				cylinder(h = 5, r = 5);
+		rotate(a = [0, 0, 45]) {
+			hull() {
+				translate(v = [-9.5000000000, 9.5000000000, 0]) {
+					cylinder(h = 5, r = 5);
+				}
+				translate(v = [9.5000000000, 9.5000000000, 0]) {
+					cylinder(h = 5, r = 5);
+				}
+				translate(v = [-9.5000000000, -9.5000000000, 0]) {
+					cylinder(h = 5, r = 5);
+				}
+				translate(v = [9.5000000000, -9.5000000000, 0]) {
+					cylinder(h = 5, r = 5);
+				}
 			}
 		}
 	}
