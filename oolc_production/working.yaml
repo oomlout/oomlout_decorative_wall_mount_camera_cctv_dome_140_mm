@@ -8,3 +8,5 @@ production_format:
     file_location: source_files/oolc_2.cdr
   oolc_3_test_2_by_2_sandwich_m3:
     file_location: source_files/oolc_3.cdr
+  oolc_4_6_by_6_top:
+    file_location: source_files/oolc_4.cdr
