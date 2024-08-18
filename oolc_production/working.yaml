@@ -4,5 +4,7 @@ project_repo: https://github.com/oomlout/oomlout_decorative_wall_mount_camera_cc
 production_format:
   oolc_1_test_2_by_2:
     file_location: source_files/oolc_1.cdr
-  oolc_1_test_2_by_2_sandwich:
+  oolc_2_test_2_by_2_sandwich:
     file_location: source_files/oolc_2.cdr
+  oolc_3_test_2_by_2_sandwich_m3:
+    file_location: source_files/oolc_3.cdr
