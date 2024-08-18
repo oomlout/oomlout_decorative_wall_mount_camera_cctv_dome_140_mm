@@ -12,3 +12,13 @@
 * thickness:   
 * material:   
  
+
+### oolc_1_test_2_by_2_sandwich
+* link: [/oolc_1_test_2_by_2_sandwich](oolc_1_test_2_by_2_sandwich)  
+![](oolc_1_test_2_by_2_sandwich/working_300.png)  
+![](oolc_1_test_2_by_2_sandwich/image_300.jpg)  
+* width:   
+* height:   
+* thickness:   
+* material:   
+ 
