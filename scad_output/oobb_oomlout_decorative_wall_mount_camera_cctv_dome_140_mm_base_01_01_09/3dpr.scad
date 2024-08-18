@@ -5,15 +5,15 @@ difference() {
 	union() {
 		cylinder(h = 9, r = 2.3750000000);
 		translate(v = [0, 0, 6.0000000000]) {
-			cylinder(h = 6, r = 4.0000000000);
+			cylinder(h = 8, r = 4.0000000000);
 		}
 	}
 	union() {
-		translate(v = [0, 0, 9]) {
+		translate(v = [0, 0, 11]) {
 			rotate(a = [0, 0, 0]) {
 				difference() {
 					union() {
-						translate(v = [0, 0, -12.0000000000]) {
+						translate(v = [0, 0, -16.0000000000]) {
 							rotate(a = [0, 0, 0]) {
 								difference() {
 									union() {
@@ -61,7 +61,7 @@ difference() {
 								}
 							}
 						}
-						translate(v = [0, 0, -12.0000000000]) {
+						translate(v = [0, 0, -16.0000000000]) {
 							rotate(a = [0, 0, 0]) {
 								difference() {
 									union() {
@@ -109,7 +109,7 @@ difference() {
 								}
 							}
 						}
-						translate(v = [0, 0, -12.0000000000]) {
+						translate(v = [0, 0, -16.0000000000]) {
 							rotate(a = [0, 0, 0]) {
 								difference() {
 									union() {
@@ -157,12 +157,12 @@ difference() {
 								}
 							}
 						}
-						#translate(v = [0, 0, -12.0000000000]) {
-							cylinder(h = 12, r = 1.5000000000);
+						#translate(v = [0, 0, -16.0000000000]) {
+							cylinder(h = 16, r = 1.5000000000);
 						}
 						#cylinder(h = 3.2000000000, r = 3.0000000000);
-						#translate(v = [0, 0, -12.0000000000]) {
-							cylinder(h = 12, r = 1.8000000000);
+						#translate(v = [0, 0, -16.0000000000]) {
+							cylinder(h = 16, r = 1.8000000000);
 						}
 						#translate(v = [-1.7500000000, -3.2500000000, -0.3000000000]) {
 							cube(size = [3.5000000000, 6.5000000000, 0.3000000000]);
@@ -170,8 +170,8 @@ difference() {
 						#translate(v = [-1.7500000000, -1.7500000000, -0.6000000000]) {
 							cube(size = [3.5000000000, 3.5000000000, 0.3000000000]);
 						}
-						#translate(v = [0, 0, -12.0000000000]) {
-							cylinder(h = 12, r = 1.5000000000);
+						#translate(v = [0, 0, -16.0000000000]) {
+							cylinder(h = 16, r = 1.5000000000);
 						}
 					}
 					union();

@@ -86,11 +86,12 @@ def get_base(thing, **kwargs):
     p3 = copy.deepcopy(kwargs)
     p3["type"] = "p"
     p3["shape"] = f"oobb_cylinder"
-    p3["depth"] = 3 + 3
+    ex = 5
+    p3["depth"] = 3 + ex
     p3["radius"] = 8/2
     #p3["m"] = "#"
     pos1 = copy.deepcopy(pos)
-    pos1[2] += depth + 3
+    pos1[2] += depth + ex
     p3["pos"] = pos1
     p3["zz"] = "top"
     oobb_base.append_full(thing,**p3)
@@ -110,11 +111,11 @@ def get_base(thing, **kwargs):
     p3["type"] = "n"
     p3["shape"] = f"oobb_screw_socket_cap"
     p3["radius_name"] = "m3"
-    p3["depth"] = depth + 3
+    p3["depth"] = 16
     p3["nut"] = True
     p3["m"] = "#"
     pos1 = copy.deepcopy(pos)
-    pos1[2] += depth
+    pos1[2] += depth + 2
     p3["pos"] = pos1
     rot1 = [0,0,0]
     p3["rot"] = rot1
