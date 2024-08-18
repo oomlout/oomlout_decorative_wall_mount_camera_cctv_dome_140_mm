@@ -42,12 +42,27 @@ def make_scad(**kwargs):
         part_default["full_shift"] = [0, 0, 0]
         part_default["full_rotations"] = [0, 0, 0]
         
+        
+        part = copy.deepcopy(part_default)
+        p3 = copy.deepcopy(kwargs)
+        p3["thickness"] = 2
+        p3["half"] = True
+        part["kwargs"] = p3
+        part["name"] = "spacer_star"
+        parts.append(part)
+
+        
+        
         part = copy.deepcopy(part_default)
         p3 = copy.deepcopy(kwargs)
         #p3["thickness"] = 6
         part["kwargs"] = p3
-        part["name"] = "base"
+        part["name"] = "screw_standoff"
         parts.append(part)
+
+
+
+
 
         
     #make the parts
@@ -143,7 +158,194 @@ def get_base(thing, **kwargs):
         p3["shape"] = f"oobb_slice"
         #p3["m"] = "#"
         oobb_base.append_full(thing,**p3)
+
+
+def get_screw_standoff(thing, **kwargs):
+
+    depth = kwargs.get("thickness", 4)
+    prepare_print = kwargs.get("prepare_print", False)
+
+    pos = kwargs.get("pos", [0, 0, 0])
+    #pos = copy.deepcopy(pos)
+    #pos[2] += -20
+
+    #add 5 mm cylinder
+    p3 = copy.deepcopy(kwargs)
+    p3["type"] = "p"
+    p3["shape"] = f"oobb_cylinder"    
+    p3["depth"] = depth
+    p3["radius"] = 4.75/2
+    #p3["m"] = "#"
+    pos1 = copy.deepcopy(pos)         
+    p3["zz"] = "bottom"
+    p3["pos"] = pos1
+    oobb_base.append_full(thing,**p3)
     
+    #add 8mm cylinder top
+    p3 = copy.deepcopy(kwargs)
+    p3["type"] = "p"
+    p3["shape"] = f"oobb_cylinder"
+    ex = 5
+    p3["depth"] = 3 + ex
+    p3["radius"] = 8/2
+    #p3["m"] = "#"
+    pos1 = copy.deepcopy(pos)
+    pos1[2] += depth + ex
+    p3["pos"] = pos1
+    p3["zz"] = "top"
+    oobb_base.append_full(thing,**p3)
+    
+    #add hole
+    p3 = copy.deepcopy(kwargs)
+    p3["type"] = "n"
+    p3["shape"] = f"oobb_hole"
+    p3["radius_name"] = "m3"
+    #p3["m"] = "#"
+    pos1 = copy.deepcopy(pos)         
+    p3["pos"] = pos1
+    oobb_base.append_full(thing,**p3)
+
+    #add countersunk screw
+    p3 = copy.deepcopy(kwargs)
+    p3["type"] = "n"
+    p3["shape"] = f"oobb_screw_socket_cap"
+    p3["radius_name"] = "m3"
+    p3["depth"] = 16
+    p3["nut"] = True
+    p3["m"] = "#"
+    pos1 = copy.deepcopy(pos)
+    pos1[2] += depth + 2
+    p3["pos"] = pos1
+    rot1 = [0,0,0]
+    p3["rot"] = rot1
+    oobb_base.append_full(thing,**p3)
+
+
+    if prepare_print:
+        #put into a rotation object
+        components_second = copy.deepcopy(thing["components"])
+        return_value_2 = {}
+        return_value_2["type"]  = "rotation"
+        return_value_2["typetype"]  = "p"
+        pos1 = copy.deepcopy(pos)
+        pos1[0] += 50
+        return_value_2["pos"] = pos1
+        return_value_2["rot"] = [180,0,0]
+        return_value_2["objects"] = components_second
+        
+        thing["components"].append(return_value_2)
+
+    
+        #add slice # top
+        p3 = copy.deepcopy(kwargs)
+        p3["type"] = "n"
+        p3["shape"] = f"oobb_slice"
+        #p3["m"] = "#"
+        oobb_base.append_full(thing,**p3)
+
+def get_spacer_star(thing, **kwargs):
+
+    depth = kwargs.get("thickness", 4)
+    prepare_print = kwargs.get("prepare_print", False)
+
+    pos = kwargs.get("pos", [0, 0, 0])
+    #pos = copy.deepcopy(pos)
+    #pos[2] += -20
+
+    #add rounded rectangle
+    p3 = copy.deepcopy(kwargs)
+    p3["type"] = "p"
+    p3["shape"] = f"rounded_rectangle"
+    dep = depth
+    wid = 74
+    hei = 74
+    size = [wid, hei, dep]
+    p3["size"] = size
+    #p3["m"] = "#"
+    pos1 = copy.deepcopy(pos)             
+    p3["pos"] = pos1
+    rot = [0,0,45]
+    p3["rot"] = rot    
+    oobb_base.append_full(thing,**p3)
+    
+    #add centrall rounded triangle twist
+    p3 = copy.deepcopy(kwargs)
+    p3["type"] = "p"
+    p3["shape"] = f"rounded_rectangle"
+    dep1 = depth + 3
+    wid = 29
+    hei = 29
+    size = [wid, hei, dep1]
+    p3["size"] = size
+    #p3["m"] = "#"
+    pos1 = copy.deepcopy(pos)             
+    p3["pos"] = pos1
+    oobb_base.append_full(thing,**p3)
+
+
+    #add m3 holes
+    hole_positions = []
+    offset = 30
+    hole_positions.append([offset, 0,0])
+    hole_positions.append([-offset, 0,0])
+    hole_positions.append([0, -offset,0])
+    hole_positions.append([0, offset,0])
+    #hole_positions.append([0, 0,0])
+
+    p3 = copy.deepcopy(kwargs)
+    p3["type"] = "n"
+    p3["shape"] = f"oobb_hole"    
+    p3["radius_name"] = "m3"
+    #p3["m"] = "#"    
+    p3["pos"] = hole_positions
+    oobb_base.append_full(thing,**p3)
+    
+    #add cylinder cutouts
+    positions_cylinder = []
+    offset_cylinder = 65
+    positions_cylinder.append([offset_cylinder, offset_cylinder,depth/2])
+    positions_cylinder.append([-offset_cylinder, offset_cylinder,depth/2])
+    positions_cylinder.append([offset_cylinder, -offset_cylinder,depth/2])
+    positions_cylinder.append([-offset_cylinder, -offset_cylinder,depth/2])
+    p3 = copy.deepcopy(kwargs)
+    p3["type"] = "n"
+    p3["shape"] = f"oobb_cylinder"
+    p3["radius"] = 135/2
+    p3["depth"] = depth
+    #p3["m"] = "#"
+    p3["pos"] = positions_cylinder
+    oobb_base.append_full(thing,**p3)
+
+
+
+
+    oobb_base.append_full(thing,**p3)
+    
+    
+
+    if prepare_print:
+        #put into a rotation object
+        components_second = copy.deepcopy(thing["components"])
+        return_value_2 = {}
+        return_value_2["type"]  = "rotation"
+        return_value_2["typetype"]  = "p"
+        pos1 = copy.deepcopy(pos)
+        pos1[0] += 50
+        return_value_2["pos"] = pos1
+        return_value_2["rot"] = [180,0,0]
+        return_value_2["objects"] = components_second
+        
+        thing["components"].append(return_value_2)
+
+    
+        #add slice # top
+        p3 = copy.deepcopy(kwargs)
+        p3["type"] = "n"
+        p3["shape"] = f"oobb_slice"
+        #p3["m"] = "#"
+        oobb_base.append_full(thing,**p3)
+
+
 ###### utilities
 
 
@@ -166,11 +368,15 @@ def make_scad_generic(part):
     kwargs.pop("size","")
 
     #get the part from the function get_{name}"
-    try:        
-        func = globals()[f"get_{name}"]
-        func(thing, **kwargs)
-    except:
-        get_base(thing, **kwargs)
+        
+    func = globals()[f"get_{name}"]    
+    # test if func exists
+    if callable(func):            
+        func(thing, **kwargs)        
+    else:            
+        get_base(thing, **kwargs)   
+    
+        
 
     for mode in modes:
         depth = thing.get(
