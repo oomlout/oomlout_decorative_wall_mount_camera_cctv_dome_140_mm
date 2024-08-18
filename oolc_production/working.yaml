@@ -10,3 +10,5 @@ production_format:
     file_location: source_files/oolc_3.cdr
   oolc_4_6_by_6_top:
     file_location: source_files/oolc_4.cdr
+  oolc_5_6_by_6_bottom:
+    file_location: source_files/oolc_5.cdr
