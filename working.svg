@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW X6 -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="600mm" height="600mm" version="1.1" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd"
+viewBox="0 0 60000 60000"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <font id="FontID0" horiz-adv-x="690" font-variant="normal" fill-rule="nonzero" font-weight="400">
+	<font-face 
+		font-family="Lucida Sans Unicode">
+	</font-face>
+   <missing-glyph><path d="M0 0z"/></missing-glyph>
+   <glyph unicode="f" horiz-adv-x="367"><path d="M114 0l0 458 -75.1654 0 0 72 75.1654 0 0 63.5039c0,126.331 57.6693,189.496 173,189.496 32.3307,0 69,-5.33071 110,-16l0 -77c-43.4961,14 -78.3307,21 -104.496,21 -31.8346,0 -53.5039,-7.49606 -65,-22.6693 -11.6693,-15.1654 -17.5039,-43.3307 -17.5039,-84.4961l0 -73.8346 133.165 0 0 -72 -133.165 0 0 -458 -96 0z"/></glyph>
+   <glyph unicode="w" horiz-adv-x="770"><path d="M158 0l-152 530 93.6693 0 116.496 -411.496 125.669 411.496 96 0 110.496 -410.835 133.669 410.835 82 0 -173 -530 -96 0 -113.669 413.331 -127.331 -413.331 -96 0z"/></glyph>
+   <glyph unicode="0" horiz-adv-x="632"><path d="M316 -18c-75.8346,0 -137,34.8346 -183.331,104.331 -46.5039,69.5039 -69.6693,161.173 -69.6693,275.173 0,114 23.1654,205.661 69.6693,275.165 46.3307,69.4961 107.496,104.331 183.331,104.331 76.1654,0 137.331,-34.6693 183.669,-104 46.1654,-69.3307 69.3307,-161.165 69.3307,-275.496 0,-114 -23.1654,-205.669 -69.3307,-275.173 -46.3386,-69.4961 -107.504,-104.331 -183.669,-104.331zm-0.165354 72c100.165,0 150.165,102.504 150.165,307.504 0,205 -50,307.496 -150.165,307.496 -99.8346,0 -149.835,-102.496 -149.835,-307.496 0,-205 50,-307.504 149.835,-307.504z"/></glyph>
+   <glyph unicode="c" horiz-adv-x="512"><path d="M464 16c-62.1654,-18.6693 -115.835,-28 -161,-28 -71.6693,0 -131,26.5039 -178.165,79.3307 -47.1654,53 -70.8346,119.835 -70.8346,200.339 0,86 23.3307,153.165 70,201.165 46.6693,48.1654 111.835,72.1654 195.504,72.1654 41.1654,0 87.4961,-5.66929 138.496,-17l0 -81c-54.1654,16 -98.3307,24 -132.331,24 -49.3386,0 -88.8346,-18.4961 -118.339,-55.3307 -29.4961,-36.8346 -44.3307,-86 -44.3307,-147.339 0,-59.4961 15.3307,-107.496 45.8346,-144.331 30.4961,-36.6693 70.3307,-55 119.835,-55 43.8346,0 88.8346,11.3307 135.331,34l0 -83z"/></glyph>
+   <glyph unicode="t" horiz-adv-x="374"><path d="M333 0.165354c-29.6693,-8.16535 -55.4961,-12.1654 -77.3307,-12.1654 -49,0 -87.1654,14 -114.504,42 -27.4961,28 -41.1654,66.8346 -41.1654,116.669l0 311.331 -66.3307 0 0 72 66.3307 0 0 95.8346 96 9.16535 0 -105 139 0 0 -72 -139 0 0 -294c0,-69.3307 30.1654,-104 90.3307,-104 12.8346,0 28.3386,2.16535 46.6693,6.33071l0 -66.1654z"/></glyph>
+   <glyph unicode="n" horiz-adv-x="620"><path d="M96 0l0 530 96 0 0 -100.165c50.8346,74.1654 113.165,111.165 186.835,111.165 46.3307,0 83.1654,-14.4961 110.331,-43.6693 27.1654,-29 40.8346,-68.1654 40.8346,-117.165l0 -380.165 -96 0 0 348.835c0,39.3307 -5.83465,67.3307 -17.3307,84 -11.6693,16.8346 -30.8346,25.1654 -57.6693,25.1654 -59,0 -114.669,-38.4961 -167,-115.496l0 -342.504 -96 0z"/></glyph>
+   <glyph unicode="v" horiz-adv-x="517"><path d="M206.331 0l-197.331 530 96 0 153.835 -411.835 162.835 411.835 90.3307 0 -209.496 -530 -96.1732 0z"/></glyph>
+   <glyph unicode="e" horiz-adv-x="557"><path d="M485 17c-64.4961,-19.3307 -119.669,-29 -165.669,-29 -78.4961,0 -142.331,26 -191.496,77.8346 -49.1654,51.8346 -73.8346,119 -73.8346,201.669 0,80.1654 21.6693,146 65.1654,197.496 43.5039,51.3307 99.1654,77 167,77 64.1654,0 113.835,-22.8346 148.835,-68.4961 35,-45.6693 52.5039,-110.339 52.5039,-194.173l-0.503937 -29.3307 -335 0c14,-126.669 75.8346,-190 185.331,-190 40.1732,0 89.3386,11.3307 147.669,34l0 -77zm-328 305l234 0c0,98.6693 -36.8346,148 -110.331,148 -74,0 -115.165,-49.3307 -123.669,-148z"/></glyph>
+   <glyph unicode="_" horiz-adv-x="500"><path d="M42 -72l0 72 416 0 0 -72 -416 0z"/></glyph>
+   <glyph unicode="m" horiz-adv-x="933"><path d="M96 0l0 530 96 0 0 -100.165c46.8346,74.1654 106.835,111.165 180.331,111.165 70.8346,0 119,-37 144.669,-111.165 45.5039,74.8346 104.835,112.165 177.669,112.165 46.4961,0 82.6614,-13.6693 108.496,-41.1654 25.8346,-27.5039 38.8346,-66 38.8346,-115.504l0 -385.331 -96 0 0 369.504c0,60.3307 -24,90.4961 -72,90.4961 -49.8346,0 -102.165,-35.1654 -157,-105.669l0 -354.331 -96 0 0 369.835c0,60.8346 -24.3307,91.1654 -73.1654,91.1654 -48.5039,0 -100.504,-35.3307 -155.835,-106.165l0 -354.835 -96 0z"/></glyph>
+   <glyph unicode="4" horiz-adv-x="632"><path d="M377 0l0 205 -326 0 0 73 326 445 90 0 0 -439 97 0 0 -79 -97 0 0 -205 -90 0zm-231.165 284l237.165 0 0 320.331 -237.165 -320.331z"/></glyph>
+   <glyph unicode="1" horiz-adv-x="632"><path d="M262 0l0 651 -115 0 0 60 211 18 0 -729 -96 0z"/></glyph>
+   <glyph unicode="d" horiz-adv-x="629"><path d="M437 0l0 99.5039c-39.1654,-74.3386 -98.1654,-111.504 -177,-111.504 -64,0 -114.331,23.1654 -151,69.6693 -36.6693,46.4961 -55,110 -55,190.496 0,88 20.8346,158.835 62.3307,212.504 41.6693,53.4961 96.3386,80.3307 164.173,80.3307 62.8268,0 115.165,-24 156.496,-72.1654l0 302.165 96 0 0 -771 -96 0zm0 403.165c-49.8346,43.8346 -97,65.8346 -141.669,65.8346 -44,0 -78,-18.3307 -102.165,-55.1654 -24.1654,-36.6693 -36.1654,-88.6693 -36.1654,-156 0,-123.835 41,-185.835 123.165,-185.835 53.3386,0 105.669,29.1654 156.835,87.3307l0 243.835z"/></glyph>
+   <glyph unicode="u" horiz-adv-x="620"><path d="M428 0l0 99.6693c-51.1654,-74.5039 -113.331,-111.669 -186.331,-111.669 -46.3386,0 -83.1654,14.5039 -110.504,43.6693 -27.4961,29.1654 -41.1654,68.3307 -41.1654,117.835l0 380.496 96 0 0 -349.165c0,-39.8346 5.83465,-68 17.3307,-84.6693 11.6693,-16.8346 31,-25.1654 58.1732,-25.1654 58.6614,0 114.331,38.5039 166.496,115.669l0 343.331 96 0 0 -530 -96 0z"/></glyph>
+   <glyph unicode="a" horiz-adv-x="552"><path d="M369.165 67.5039c-57.6614,-53 -113.165,-79.5039 -166.496,-79.5039 -43.8346,0 -80.3386,13.6693 -109.165,41.1654 -29,27.5039 -43.5039,62.1654 -43.5039,104 0,57.8346 24.3307,102.339 73,133.339 48.6693,31 118.504,46.4961 209.504,46.4961l22.4961 0 0 63.8346c0,61.4961 -32,92.1654 -96.1654,92.1654 -49.6693,0 -104,-15.6693 -162.835,-47l0 79c64.6693,26.6693 125.669,40 182.835,40 58.8346,0 102.331,-13.3307 130.165,-40.1654 28,-26.8346 42,-68.1654 42,-124l0 -239.504c0,-54.8268 16.8346,-82.3307 50.6693,-82.3307 4.16535,0 10.3307,0.669291 18.4961,2l6.83465 -53.3307c-21.8346,-10.5039 -45.8346,-15.6693 -72.1654,-15.6693 -44.8346,0 -73.3307,26.5039 -85.6693,79.5039zm-14.1654 52.3307l0 136.165 -30.8346 1c-53.3307,0 -96.3307,-9.83465 -129.165,-29.4961 -32.6693,-19.8346 -49,-46 -49,-78.6693 0,-22.8346 8.16535,-42.1654 24.3307,-58 16.3386,-15.8346 36.1732,-23.8346 59.6693,-23.8346 40,0 81.6693,17.6693 125,52.8346z"/></glyph>
+   <glyph unicode="r" horiz-adv-x="409"><path d="M96 0l0 530 96 0 0 -100.165c38.1654,74.1654 93.5039,111.165 166.165,111.165 9.83465,0 20.1654,-0.834646 30.8346,-2.49606l0 -89.8346c-16.6693,5.49606 -31.3307,8.33071 -44,8.33071 -61,0 -112,-36 -153,-108.165l0 -348.835 -96 0z"/></glyph>
+   <glyph unicode="o" horiz-adv-x="614"><path d="M307 -12c-77.8346,0 -139.496,24.8346 -184.835,74.5039 -45.4961,49.6614 -68.1654,117.165 -68.1654,202.331 0,85 22.6693,152.331 68.1654,201.835 45.3386,49.4961 107,74.3307 184.835,74.3307 77.8346,0 139.504,-24.8346 184.835,-74.3307 45.4961,-49.5039 68.1654,-116.835 68.1654,-201.835 0,-85.1654 -22.6693,-152.669 -68.1654,-202.331 -45.3307,-49.6693 -107,-74.5039 -184.835,-74.5039zm-0.165354 72c47.4961,0 84.4961,17.8346 110.835,53.6693 26.1654,35.6614 39.3307,86.1654 39.3307,151.165 0,64.8346 -13.1654,115.165 -39.3307,150.835 -26.3386,35.4961 -63.3386,53.3307 -110.835,53.3307 -47.6693,0 -84.6693,-17.8346 -110.669,-53.3307 -26.1654,-35.6693 -39.1654,-86 -39.1654,-150.835 0,-65 13,-115.504 39.1654,-151.165 26,-35.8346 63,-53.6693 110.669,-53.6693z"/></glyph>
+   <glyph unicode="l" horiz-adv-x="289"><path d="M96 0l0 771 96 0 0 -771 -96 0z"/></glyph>
+   <glyph unicode="i" horiz-adv-x="289"><path d="M96 0l0 530 96 0 0 -530 -96 0zm0 627l0 96 96 0 0 -96 -96 0z"/></glyph>
+  </font>
+ </defs>
+ <g id="Layer_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <text x="10890" y="1830"  fill="black" font-weight="normal" font-size="1270" font-family="Lucida Sans Unicode">oomlout_decorative_wall_mount_camera_cctv_dome_140_mm</text>
+  <g id="_817255280">
+   <path fill="none" stroke="black" stroke-width="52.92" stroke-linecap="round" stroke-linejoin="round" d="M27800 31700l0 -3400c0,-276 224,-500 500,-500l3400 0c276,0 500,224 500,500l0 3400c0,276 -224,500 -500,500l-3400 0c-276,0 -500,-224 -500,-500z"/>
+   <circle fill="none" stroke="black" stroke-width="52.92" stroke-linecap="round" stroke-linejoin="round" cx="30000" cy="30000" r="300"/>
+   <circle fill="none" stroke="black" stroke-width="52.92" stroke-linecap="round" stroke-linejoin="round" cx="30000" cy="28500" r="300"/>
+   <circle fill="none" stroke="black" stroke-width="52.92" stroke-linecap="round" stroke-linejoin="round" cx="30000" cy="31500" r="300"/>
+   <circle fill="none" stroke="black" stroke-width="52.92" stroke-linecap="round" stroke-linejoin="round" cx="31500" cy="30000" r="300"/>
+   <circle fill="none" stroke="black" stroke-width="52.92" stroke-linecap="round" stroke-linejoin="round" cx="31500" cy="28500" r="300"/>
+   <circle fill="none" stroke="black" stroke-width="52.92" stroke-linecap="round" stroke-linejoin="round" cx="31500" cy="31500" r="300"/>
+   <circle fill="none" stroke="black" stroke-width="52.92" stroke-linecap="round" stroke-linejoin="round" cx="29250" cy="31500" r="150"/>
+   <circle fill="none" stroke="black" stroke-width="52.92" stroke-linecap="round" stroke-linejoin="round" cx="30750" cy="31500" r="150"/>
+   <circle fill="none" stroke="black" stroke-width="52.92" stroke-linecap="round" stroke-linejoin="round" cx="29250" cy="30000" r="150"/>
+   <circle fill="none" stroke="black" stroke-width="52.92" stroke-linecap="round" stroke-linejoin="round" cx="30750" cy="30000" r="150"/>
+   <circle fill="none" stroke="black" stroke-width="52.92" stroke-linecap="round" stroke-linejoin="round" cx="29250" cy="28500" r="150"/>
+   <circle fill="none" stroke="black" stroke-width="52.92" stroke-linecap="round" stroke-linejoin="round" cx="30750" cy="28500" r="150"/>
+   <circle fill="none" stroke="black" stroke-width="52.92" stroke-linecap="round" stroke-linejoin="round" cx="30000" cy="30750" r="150"/>
+   <circle fill="none" stroke="black" stroke-width="52.92" stroke-linecap="round" stroke-linejoin="round" cx="31500" cy="30750" r="150"/>
+   <circle fill="none" stroke="black" stroke-width="52.92" stroke-linecap="round" stroke-linejoin="round" cx="30000" cy="29250" r="150"/>
+   <circle fill="none" stroke="black" stroke-width="52.92" stroke-linecap="round" stroke-linejoin="round" cx="31500" cy="29250" r="150"/>
+   <circle fill="none" stroke="black" stroke-width="52.92" stroke-linecap="round" stroke-linejoin="round" cx="28500" cy="30000" r="300"/>
+   <circle fill="none" stroke="black" stroke-width="52.92" stroke-linecap="round" stroke-linejoin="round" cx="28500" cy="28500" r="300"/>
+   <circle fill="none" stroke="black" stroke-width="52.92" stroke-linecap="round" stroke-linejoin="round" cx="28500" cy="31500" r="300"/>
+   <circle fill="none" stroke="black" stroke-width="52.92" stroke-linecap="round" stroke-linejoin="round" cx="28500" cy="30750" r="150"/>
+   <circle fill="none" stroke="black" stroke-width="52.92" stroke-linecap="round" stroke-linejoin="round" cx="28500" cy="29250" r="150"/>
+  </g>
+  <circle fill="none" stroke="black" stroke-width="52.92" stroke-linecap="round" stroke-linejoin="round" cx="3000" cy="57000" r="150"/>
+  <circle fill="none" stroke="black" stroke-width="52.92" stroke-linecap="round" stroke-linejoin="round" cx="3000" cy="57000" r="250"/>
+  <circle fill="none" stroke="black" stroke-width="52.92" stroke-linecap="round" stroke-linejoin="round" cx="3000" cy="57000" r="400"/>
+  <rect fill="none" stroke="black" stroke-width="52.92" stroke-linecap="round" stroke-linejoin="round" x="5850" y="56400" width="300" height="600"/>
+  <rect fill="none" stroke="black" stroke-width="52.92" stroke-linecap="round" stroke-linejoin="round" x="5750" y="56400" width="500" height="600"/>
+  <rect fill="none" stroke="black" stroke-width="52.92" stroke-linecap="round" stroke-linejoin="round" x="5600" y="56100" width="800" height="300"/>
+  <text x="1637" y="6330"  fill="black" font-weight="normal" font-size="1270" font-family="Lucida Sans Unicode">camera_cctv_dome_140_mm</text>
+  <circle fill="none" stroke="black" stroke-width="52.92" stroke-linecap="round" stroke-linejoin="round" cx="10500" cy="15000" r="7000"/>
+  <circle fill="none" stroke="black" stroke-width="52.92" stroke-linecap="round" stroke-linejoin="round" cx="10500" cy="15000" r="6000"/>
+  <circle fill="none" stroke="black" stroke-width="52.92" stroke-linecap="round" stroke-linejoin="round" cx="6050" cy="15000" r="450"/>
+  <circle fill="none" stroke="black" stroke-width="52.92" stroke-linecap="round" stroke-linejoin="round" cx="14950" cy="15000" r="450"/>
+  <text x="3096" y="4830"  fill="black" font-weight="normal" font-size="1270" font-family="Lucida Sans Unicode">reference</text>
+ </g>
+</svg>
