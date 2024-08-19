@@ -46,7 +46,7 @@ def make_scad(**kwargs):
         part = copy.deepcopy(part_default)
         p3 = copy.deepcopy(kwargs)
         p3["thickness"] = 2
-        p3["half"] = True
+        p3["extra"] = "half"
         part["kwargs"] = p3
         part["name"] = "spacer_star"
         parts.append(part)
@@ -248,6 +248,8 @@ def get_spacer_star(thing, **kwargs):
     depth = kwargs.get("thickness", 4)
     prepare_print = kwargs.get("prepare_print", False)
 
+    extra = kwargs.get("extra", "")
+
     pos = kwargs.get("pos", [0, 0, 0])
     #pos = copy.deepcopy(pos)
     #pos[2] += -20
@@ -269,20 +271,21 @@ def get_spacer_star(thing, **kwargs):
     oobb_base.append_full(thing,**p3)
     
     #add centrall rounded triangle twist
-    p3 = copy.deepcopy(kwargs)
-    p3["type"] = "p"
-    p3["shape"] = f"rounded_rectangle"
-    dep1 = depth + 3
-    wid = 29
-    hei = 29
-    size = [wid, hei, dep1]
-    p3["size"] = size
-    #p3["m"] = "#"
-    pos1 = copy.deepcopy(pos)             
-    p3["pos"] = pos1
-    rot = [0,0,45]
-    p3["rot"] = rot
-    oobb_base.append_full(thing,**p3)
+    if extra != "half":            
+        p3 = copy.deepcopy(kwargs)
+        p3["type"] = "p"
+        p3["shape"] = f"rounded_rectangle"
+        dep1 = depth + 3
+        wid = 29
+        hei = 29
+        size = [wid, hei, dep1]
+        p3["size"] = size
+        #p3["m"] = "#"
+        pos1 = copy.deepcopy(pos)             
+        p3["pos"] = pos1
+        rot = [0,0,45]
+        p3["rot"] = rot
+        oobb_base.append_full(thing,**p3)
 
 
     #add m3 holes
@@ -321,8 +324,19 @@ def get_spacer_star(thing, **kwargs):
 
 
 
-    oobb_base.append_full(thing,**p3)
-    
+    if extra == "half":
+        #add big cube to cut in half
+        p3 = copy.deepcopy(kwargs)
+        p3["type"] = "n"
+        p3["shape"] = f"oobb_slice"    
+        #p3["m"] = "#"
+        pos1 = copy.deepcopy(pos)
+        pos1[0] += -250
+        pos1[1] += 5
+        pos1[2] += -250
+
+        p3["pos"] = pos1
+        oobb_base.append_full(thing,**p3)
     
 
     if prepare_print:
