@@ -12,7 +12,7 @@ def make_scad(**kwargs):
     # save_type variables
     if True:
         filter = ""
-        #filter = "test"
+        #filter = "quarter"
 
         #kwargs["save_type"] = "none"
         kwargs["save_type"] = "all"
@@ -47,6 +47,14 @@ def make_scad(**kwargs):
         p3 = copy.deepcopy(kwargs)
         p3["thickness"] = 2
         p3["extra"] = "half"
+        part["kwargs"] = p3
+        part["name"] = "spacer_star"
+        parts.append(part)
+        
+        part = copy.deepcopy(part_default)
+        p3 = copy.deepcopy(kwargs)
+        p3["thickness"] = 2
+        p3["extra"] = "quarter"
         part["kwargs"] = p3
         part["name"] = "spacer_star"
         parts.append(part)
@@ -271,7 +279,7 @@ def get_spacer_star(thing, **kwargs):
     oobb_base.append_full(thing,**p3)
     
     #add centrall rounded triangle twist
-    if extra != "half":            
+    if extra != "half" and extra != "quarter":            
         p3 = copy.deepcopy(kwargs)
         p3["type"] = "p"
         p3["shape"] = f"rounded_rectangle"
@@ -324,7 +332,7 @@ def get_spacer_star(thing, **kwargs):
 
 
 
-    if extra == "half":
+    if extra == "half" or extra == "quarter":
         #add big cube to cut in half
         p3 = copy.deepcopy(kwargs)
         p3["type"] = "n"
@@ -334,7 +342,19 @@ def get_spacer_star(thing, **kwargs):
         pos1[0] += -250
         pos1[1] += 5
         pos1[2] += -250
+        p3["pos"] = pos1
+        oobb_base.append_full(thing,**p3)
 
+    if extra == "quarter":
+        #add big cube to cut in half
+        p3 = copy.deepcopy(kwargs)
+        p3["type"] = "n"
+        p3["shape"] = f"oobb_slice"    
+        #p3["m"] = "#"
+        pos1 = copy.deepcopy(pos)
+        pos1[1] += -250
+        pos1[0] += 5
+        pos1[2] += -250
         p3["pos"] = pos1
         oobb_base.append_full(thing,**p3)
     
