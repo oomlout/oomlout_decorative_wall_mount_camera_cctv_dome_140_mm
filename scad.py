@@ -12,9 +12,9 @@ def make_scad(**kwargs):
     # save_type variables
     if True:
         filter = ""
-        #filter = "quarter"
+        filter = "hanger"
 
-        #kwargs["save_type"] = "none"
+        kwargs["save_type"] = "none"
         kwargs["save_type"] = "all"
         
         kwargs["overwrite"] = True
@@ -66,6 +66,17 @@ def make_scad(**kwargs):
         #p3["thickness"] = 6
         part["kwargs"] = p3
         part["name"] = "screw_standoff"
+        parts.append(part)
+
+        
+        part = copy.deepcopy(part_default)
+        p3 = copy.deepcopy(kwargs)
+        #p3["thickness"] = 6
+        p3["width"] = 5
+        p3["height"] = 4
+        p3["thickness"] = 12
+        part["kwargs"] = p3
+        part["name"] = "hanger"
         parts.append(part)
 
 
@@ -144,6 +155,154 @@ def get_base(thing, **kwargs):
     p3["rot"] = rot1
     oobb_base.append_full(thing,**p3)
 
+
+    if prepare_print:
+        #put into a rotation object
+        components_second = copy.deepcopy(thing["components"])
+        return_value_2 = {}
+        return_value_2["type"]  = "rotation"
+        return_value_2["typetype"]  = "p"
+        pos1 = copy.deepcopy(pos)
+        pos1[0] += 50
+        return_value_2["pos"] = pos1
+        return_value_2["rot"] = [180,0,0]
+        return_value_2["objects"] = components_second
+        
+        thing["components"].append(return_value_2)
+
+    
+        #add slice # top
+        p3 = copy.deepcopy(kwargs)
+        p3["type"] = "n"
+        p3["shape"] = f"oobb_slice"
+        #p3["m"] = "#"
+        oobb_base.append_full(thing,**p3)
+
+def get_hanger(thing, **kwargs):
+
+    depth = kwargs.get("thickness", 4)
+    prepare_print = kwargs.get("prepare_print", False)
+
+    extra = kwargs.get("extra", "")
+
+    pos = kwargs.get("pos", [0, 0, 0])
+    #pos = copy.deepcopy(pos)
+    #pos[2] += -20
+
+    #add rounded rectangle
+    p3 = copy.deepcopy(kwargs)
+    p3["type"] = "p"
+    p3["shape"] = f"rounded_rectangle"
+    dep = depth
+    wid = 74
+    hei = 59
+    size = [wid, hei, dep]
+    p3["size"] = size
+    #p3["m"] = "#"
+    pos1 = copy.deepcopy(pos)             
+    pos1[1] += -hei/2 + 22
+    p3["pos"] = pos1
+    rot = [0,0,0]
+    p3["rot"] = rot    
+    oobb_base.append_full(thing,**p3)
+    
+
+    #cutoff main piece
+    p3 = copy.deepcopy(kwargs)
+    p3["type"] = "n"
+    p3["shape"] = f"oobb_slice"
+    #p3["m"] = "#"
+    pos1 = copy.deepcopy(pos)
+    pos1[0] += -500/2 
+    pos1[1] += (74-59) - 500 - 15 + 6
+    pos1[2] += depth - 3
+    p3["pos"] = pos1
+    p3["zz"] = "top"
+    oobb_base.append_full(thing,**p3)
+
+
+    #add countersunk screwa
+    hole_positions = []
+    offset_x = 30
+    offset_y = 15
+    hole_positions.append([offset_x, offset_y,depth])
+    hole_positions.append([0, offset_y,depth])
+    hole_positions.append([-offset_x, offset_y,depth])
+
+    p3 = copy.deepcopy(kwargs)
+    p3["type"] = "n"
+    p3["shape"] = f"oobb_screw_countersunk"
+    p3["radius_name"] = "m3_screw_wood"
+    p3["depth"] = depth
+    p3["pos"] = hole_positions
+    #p3["m"] = "#"
+    oobb_base.append_full(thing,**p3)
+
+    
+
+
+    #add m3 holes
+    hole_positions = []
+    offset = 30
+    hole_positions.append([offset, 0,0])
+    hole_positions.append([-offset, 0,0])
+    hole_positions.append([0, -offset,0])
+    hole_positions.append([0, offset,0])
+    #hole_positions.append([0, 0,0])
+
+    p3 = copy.deepcopy(kwargs)
+    p3["type"] = "n"
+    p3["shape"] = f"oobb_hole"    
+    p3["radius_name"] = "m3"
+    #p3["m"] = "#"    
+    p3["pos"] = hole_positions
+    oobb_base.append_full(thing,**p3)
+    
+    #add cylinder cutouts
+    positions_cylinder = []
+    offset_cylinder = 65
+    #positions_cylinder.append([offset_cylinder, offset_cylinder,depth/2])
+    #positions_cylinder.append([-offset_cylinder, offset_cylinder,depth/2])
+    positions_cylinder.append([offset_cylinder, -offset_cylinder,depth/2])
+    positions_cylinder.append([-offset_cylinder, -offset_cylinder,depth/2])
+    p3 = copy.deepcopy(kwargs)
+    p3["type"] = "n"
+    p3["shape"] = f"oobb_cylinder"
+    p3["radius"] = 135/2
+    p3["depth"] = depth
+    #p3["m"] = "#"
+    p3["pos"] = positions_cylinder
+    oobb_base.append_full(thing,**p3)
+
+
+
+
+    if extra == "half" or extra == "quarter":
+        #add big cube to cut in half
+        p3 = copy.deepcopy(kwargs)
+        p3["type"] = "n"
+        p3["shape"] = f"oobb_slice"    
+        #p3["m"] = "#"
+        pos1 = copy.deepcopy(pos)
+        pos1[0] += -250
+        pos1[1] += 5
+        pos1[2] += -250
+        p3["pos"] = pos1
+        oobb_base.append_full(thing,**p3)
+
+    if extra == "quarter":
+        #add big cube to cut in half
+        p3 = copy.deepcopy(kwargs)
+        p3["type"] = "n"
+        p3["shape"] = f"oobb_slice"    
+        #p3["m"] = "#"
+        pos1 = copy.deepcopy(pos)
+        pos1[1] += -250
+        pos1[0] += 5
+        pos1[2] += -250
+        p3["pos"] = pos1
+        oobb_base.append_full(thing,**p3)
+    
 
     if prepare_print:
         #put into a rotation object
